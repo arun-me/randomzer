@@ -2,8 +2,11 @@
   "name": "randomizer",
   "version": "1.0.0",
   "private": true,
-  "author": {"name": "Arun Surendharan",
-  "email": "aruninnovate@pm.me"},
+  "author": {
+    "name": "Arun Surendharan",
+    "email": "aruninnovate@pm.me"
+  },
+  "homepage": " https://arun-me.github.io/randomzer",
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
@@ -18,8 +21,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "git":"git add . && git commit -m",
-    "postgit": "git push"
+    "git": "git add . && git commit -m",
+    "postgit": "git push && npm run deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -38,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }
